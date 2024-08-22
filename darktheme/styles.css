@@ -1,0 +1,168 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme aside,
+body.dark-theme section {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-theme .nav-links a {
+  color: #f0f0f0;
+}
+
+body.dark-theme .nav-links a:hover {
+  background-color: #333;
+}
+
+body.dark-theme .menu-toggle .bar {
+  background-color: #f0f0f0;
+}
+
+body.dark-theme .theme-toggle button {
+  color: #f0f0f0;
+}
+
+/* Header styles */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.theme-toggle button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+  background-color: #0056b3;
+  border-radius: 5px;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+/* Main content styles */
+main {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+aside {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+section {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+
+  aside {
+    flex: 1;
+    margin-right: 1rem;
+  }
+
+  section {
+    flex: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #007bff;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 7%;
+    right: 5%;
+    width: 15%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
